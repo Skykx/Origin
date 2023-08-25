@@ -6,7 +6,6 @@ Created on Wed Aug 16 15:30:25 2023
 """
 
 # Part 1 - Identify the Frauds with the Self-Organizing Map
-
 import numpy as np 
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -15,7 +14,6 @@ import pandas as pd
 dataset = pd.read_csv('Credit_Card_Applications.csv')
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
-
 
 # Feature Scaling (Skallierung anpassen durch z.B. Normalisierung)
 from sklearn.preprocessing import MinMaxScaler
@@ -46,7 +44,6 @@ for i, x in enumerate(X):
          markersize = 10,
          markeredgewidth = 2)
 show()    
-    
 
 # Finding the frauds
 mappings = som.win_map(X)
@@ -54,9 +51,7 @@ frauds = np.concatenate((mappings[(3,1)], mappings[(5,5)]), axis = 0)
 frauds = sc.inverse_transform(frauds)
 
 
-
 # Part 2 - Going from Unsupervised to Supervised Deep Learning
-
 # Creating the matrix of features
 customers  = dataset.iloc[:, 1:].values # [welche zeilen , welche spalten]
 
@@ -66,16 +61,13 @@ for i in range(len(dataset)):
     if dataset.iloc[i, 0] in frauds:
         is_fraud[i] = 1
 
-"""### Feature Scaling / Normierung"""
-
+# Feature Scaling / Normierung
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 customers = sc.fit_transform(customers)
 
-"""## Part 2 - Building the ANN
-
+# Part 2 - Building the ANN
 ### Initializing the ANN
-"""
 # Importing Keras Libaries 
 from keras.models import Sequential
 from keras.layers import Dense
