@@ -4,10 +4,8 @@ import tensorflow as tf
 
 tf.__version__
 
-
 # Part 1 - Data Preprocessing
 # Importing the dataset
-
 
 dataset = pd.read_csv('Churn_Modelling.csv')
 X = dataset.iloc[:, 3:-1].values #gives values of the matrix in x row. It takes all the columns of the file außer die letzte
