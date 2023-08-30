@@ -1,3 +1,6 @@
+# https://towardsdatascience.com/computational-fluid-dynamics-using-python-modeling-laminar-flow-272dad1ebec
+# Original github: https://github.com/gauravsdeshmukh/FlowPy 
+
 import sys
 from flowPy import *
 from parameters_htm_cfd import rowPoints, colPoints, breadth, length, rho, mu, v_wall, p_out, time, file_flag, CFL_number, \
