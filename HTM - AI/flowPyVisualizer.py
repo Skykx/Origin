@@ -1,3 +1,6 @@
+# https://towardsdatascience.com/computational-fluid-dynamics-using-python-modeling-laminar-flow-272dad1ebec
+# Original github: https://github.com/gauravsdeshmukh/FlowPy 
+
 import sys
 
 import matplotlib.animation as animation
