@@ -1,4 +1,5 @@
-#https://towardsdatascience.com/computational-fluid-dynamics-using-python-modeling-laminar-flow-272dad1ebec
+# https://towardsdatascience.com/computational-fluid-dynamics-using-python-modeling-laminar-flow-272dad1ebec
+# Original github: https://github.com/gauravsdeshmukh/FlowPy 
 
 import numpy as np
 import pandas as pd
