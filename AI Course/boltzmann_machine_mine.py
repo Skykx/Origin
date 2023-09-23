@@ -128,7 +128,6 @@ for epoch in range(1, nb_epoch+1):
         print('Epoch: ' +str(epoch)+' loss: '+str(train_loss/s))
         
 # Testing the RBM
-
 test_loss = 0 
 s = 0. 
 for id_user in range(0, nb_users): # now looping over all users one by one
